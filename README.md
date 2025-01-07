@@ -38,7 +38,7 @@ Este projeto é uma API REST para consultar informações de CEP, registrar logs
 ### **Passos para Buildar e Executar com Docker Compose**
 1. Certifique-se de que o Docker esta instalado em sua máquina e esta sendo executado.
 
-2. Suba os cont�ineres com Docker 
+2. Suba os contêineres com Docker 
    Compose:
  ```bash
    docker-compose up --build
