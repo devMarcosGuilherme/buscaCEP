@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/cep/.*"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "cep": "{{request.pathSegments[1]}}",
+      "logradouro": "Rua Exemplo",
+      "bairro": "Bairro Exemplo",
+      "cidade": "Cidade Exemplo",
+      "estado": "Estado Exemplo"
+    }
+  }
+}
