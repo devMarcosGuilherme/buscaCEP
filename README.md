@@ -44,7 +44,7 @@ Este projeto é uma API REST para consultar informações de CEP, registrar logs
    docker-compose up --build
    ```
 
-3. Verifique se os servi�os est�o rodando:
+3. Verifique se os serviços estão rodando:
     - **CEP API**: Acesse `http://localhost:8080`
     - **Wiremock**: Acesse `http://localhost:8081`
 
