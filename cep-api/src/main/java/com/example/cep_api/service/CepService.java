@@ -29,7 +29,24 @@ public class CepService {
             log.debug("Realizando requisição para o CEP: {}", cep);
             ResponseEntity<Cep> response = restTemplate.getForEntity(url, Cep.class);
             log.debug("Resposta do serviço: {}", response.getBody());
-            return response.getBody();
+
+            Cep cepResponse = response.getBody();
+            if (cepResponse != null) {
+                logConsultaService.salvarLog(
+                        cepResponse.getCep(),
+                        cepResponse.getLogradouro(),
+                        cepResponse.getBairro(),
+                        cepResponse.getCidade(),
+                        cepResponse.getEstado()
+                );
+            } else {
+                throw new IllegalArgumentException("N�o foi poss�vel encontrar esse CEP.");
+            }
+
+            return cepResponse;
+        } catch (IllegalArgumentException e) {
+            log.error("Erro de valida��o: {}", e.getMessage());
+            throw e;
         } catch (RestClientException e) {
             log.error("Erro ao consultar CEP: {}", e.getMessage(), e);
             throw new RuntimeException("Erro ao consultar CEP: " + e.getMessage());

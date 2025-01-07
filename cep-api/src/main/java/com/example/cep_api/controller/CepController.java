@@ -29,7 +29,6 @@ public class CepController {
     @GetMapping("/{cep}")
     public ResponseEntity<Object> getCep(@PathVariable final String cep) {
         try {
-            // Validação do CEP
             if (!isCepValido(cep)) {
                 return ResponseEntity.badRequest().body("CEP inválido");
             }
