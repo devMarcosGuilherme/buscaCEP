@@ -36,18 +36,15 @@ Este projeto é uma API REST para consultar informações de CEP, registrar logs
 - Maven instalado (caso deseje buildar manualmente).
 
 ### **Passos para Buildar e Executar com Docker Compose**
-1. Clone o repositório:
-   ```bash
-   git clone <URL_DO_REPOSITORIO>
-   cd <NOME_DO_DIRETORIO>
-   ```
+1. Certifique-se de que o Docker esta instalado em sua máquina e esta sendo executado.
 
-2. Suba os contêineres com Docker Compose:
-   ```bash
+2. Suba os cont�ineres com Docker 
+   Compose:
+ ```bash
    docker-compose up --build
    ```
 
-3. Verifique se os serviços estão rodando:
+3. Verifique se os servi�os est�o rodando:
     - **CEP API**: Acesse `http://localhost:8080`
     - **Wiremock**: Acesse `http://localhost:8081`
 
@@ -75,7 +72,7 @@ A API está configurada para receber consultas no endpoint:
 
 #### **Exemplo de Requisição:**
 ```bash
-GET http://localhost:8080/api/cep/01001000
+GET http://localhost:8080/cep/01001000
 ```
 
 #### **Resposta Esperada:**
@@ -127,4 +124,3 @@ Os logs são armazenados automaticamente na tabela `log_consulta`. Para acessá-
    ```
 
 ---
-v

@@ -13,8 +13,12 @@ public class LogConsulta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String cep;
-    private String dadosRetornados;
+    private String logradouro;
+    private String bairro;
+    private String cidade;
+    private String estado;
     private LocalDateTime horarioConsulta;
+
 
     public long getId() {
         return id;
@@ -32,12 +36,36 @@ public class LogConsulta {
         this.cep = cep;
     }
 
-    public String getDadosRetornados() {
-        return dadosRetornados;
+    public String getLogradouro() {
+        return logradouro;
     }
 
-    public void setDadosRetornados(String dadosRetornados) {
-        this.dadosRetornados = dadosRetornados;
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public LocalDateTime getHorarioConsulta() {
