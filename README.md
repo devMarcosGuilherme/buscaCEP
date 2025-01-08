@@ -67,7 +67,7 @@ Este projeto é uma API REST para consultar informações de CEP, registrar logs
 
 ### **1. Testar a Consulta de CEP**
 A API está configurada para receber consultas no endpoint:
-- **URL:** `http://localhost:8080/api/cep/{cep}`
+- **URL:** `http://localhost:8080/cep/{cep}`
 - **Método:** `GET`
 
 #### **Exemplo de Requisição:**
