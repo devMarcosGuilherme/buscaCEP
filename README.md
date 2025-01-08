@@ -111,7 +111,7 @@ Os logs são armazenados automaticamente na tabela `log_consulta`. Para acessá-
      },
      "response": {
        "status": 200,
-       "body": "{\"cep\":\"01001000\",\"logradouro\":\"Praça da Sé\",\"bairro\":\"Sé\",\"cidade\":\"São Paulo\",\"estado\":\"SP\"}",
+       "body": "{\"cep\":\"01001000\",\"logradouro\":\"Praça da Sé\",\"bairro\":\"Sé\",\"localidade\":\"São Paulo\",\"estado\":\"SP\"}",
        "headers": {
          "Content-Type": "application/json"
        }
