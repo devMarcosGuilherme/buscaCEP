@@ -32,7 +32,13 @@ public class CepService {
 
             Cep cepResponse = response.getBody();
             if (cepResponse != null) {
-                logConsultaService.salvarLog(cepResponse.getCep(), cepResponse.getLogradouro(), cepResponse.getBairro(), cepResponse.getlocalidade(), cepResponse.getEstado());
+                logConsultaService.salvarLog(
+                        cepResponse.getCep(),
+                        cepResponse.getLogradouro(),
+                        cepResponse.getBairro(),
+                        cepResponse.getlocalidade(),
+                        cepResponse.getEstado()
+                );
             } else {
                 throw new IllegalArgumentException("Não foi possível encontrar esse CEP.");
             }
