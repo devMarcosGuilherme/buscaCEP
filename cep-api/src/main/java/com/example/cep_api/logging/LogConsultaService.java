@@ -1,6 +1,7 @@
 package com.example.cep_api.logging;
 
 import com.example.cep_api.repository.LogConsultaRepository;
+import com.example.cep_api.utils.DataFormatter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,19 +20,29 @@ public class LogConsultaService {
         this.logConsultaRepository = logConsultaRepository;
     }
 
-    public void salvarLog(final String cep, final String logradouro, final String bairro, final String cidade, final String estado) {
-        if (logradouro == null && bairro == null && cidade == null && estado == null) {
-            throw new IllegalArgumentException("N�o foi poss�vel encontrar esse CEP.");
+    public void salvarLog(final String cep,
+                          final String logradouro,
+                          final String bairro,
+                          final String localidade,
+                          final String estado) {
+
+        if (logradouro == null && bairro == null && localidade == null && estado == null) {
+            throw new IllegalArgumentException("Não foi possível encontrar esse CEP.");
         }
 
         LogConsulta log = new LogConsulta();
+        LocalDateTime agora = LocalDateTime.now();
         log.setCep(cep);
         log.setLogradouro(logradouro);
         log.setBairro(bairro);
-        log.setCidade(cidade);
+        log.setlocalidade(localidade);
         log.setEstado(estado);
-        log.setHorarioConsulta(LocalDateTime.now());
+        log.setHorarioConsulta(agora);
         logConsultaRepository.save(log);
-        logger.info("Log salvo com sucesso para o CEP: {}", cep);
+
+        logger.info("Log salvo com sucesso para o CEP: {}. Data: {}", cep, DataFormatter.formatarDataParaExibicao(agora));
     }
+
+
 }
+

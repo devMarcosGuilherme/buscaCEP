@@ -32,20 +32,14 @@ public class CepService {
 
             Cep cepResponse = response.getBody();
             if (cepResponse != null) {
-                logConsultaService.salvarLog(
-                        cepResponse.getCep(),
-                        cepResponse.getLogradouro(),
-                        cepResponse.getBairro(),
-                        cepResponse.getCidade(),
-                        cepResponse.getEstado()
-                );
+                logConsultaService.salvarLog(cepResponse.getCep(), cepResponse.getLogradouro(), cepResponse.getBairro(), cepResponse.getlocalidade(), cepResponse.getEstado());
             } else {
-                throw new IllegalArgumentException("N�o foi poss�vel encontrar esse CEP.");
+                throw new IllegalArgumentException("Não foi possível encontrar esse CEP.");
             }
 
             return cepResponse;
         } catch (IllegalArgumentException e) {
-            log.error("Erro de valida��o: {}", e.getMessage());
+            log.error("Erro de validação: {}", e.getMessage());
             throw e;
         } catch (RestClientException e) {
             log.error("Erro ao consultar CEP: {}", e.getMessage(), e);

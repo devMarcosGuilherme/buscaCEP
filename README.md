@@ -82,7 +82,7 @@ GET http://localhost:8080/cep/01001000
   "cep": "01001000",
   "logradouro": "Praça da Sé",
   "bairro": "Sé",
-  "cidade": "São Paulo",
+  "localidade": "São Paulo",
   "estado": "SP"
 }
 ```

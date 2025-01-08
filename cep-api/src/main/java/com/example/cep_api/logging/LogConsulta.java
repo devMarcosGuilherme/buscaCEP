@@ -15,7 +15,7 @@ public class LogConsulta {
     private String cep;
     private String logradouro;
     private String bairro;
-    private String cidade;
+    private String localidade;
     private String estado;
     private LocalDateTime horarioConsulta;
 
@@ -52,12 +52,12 @@ public class LogConsulta {
         this.bairro = bairro;
     }
 
-    public String getCidade() {
-        return cidade;
+    public String getlocalidade() {
+        return localidade;
     }
 
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
+    public void setlocalidade(String localidade) {
+        this.localidade = localidade;
     }
 
     public String getEstado() {
