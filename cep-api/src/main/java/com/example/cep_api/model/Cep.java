@@ -48,11 +48,11 @@ public class Cep {
         this.bairro = bairro;
     }
 
-    public String getlocalidade() {
+    public String getLocalidade() {
         return localidade;
     }
 
-    public void setlocalidade(String localidade) {
+    public void setLocalidade(String localidade) {
         this.localidade = localidade;
     }
 

@@ -1,5 +1,6 @@
-package com.example.cep_api.logging;
+package com.example.cep_api.service;
 
+import com.example.cep_api.logging.LogConsulta;
 import com.example.cep_api.repository.LogConsultaRepository;
 import com.example.cep_api.utils.DataFormatter;
 import org.slf4j.Logger;
