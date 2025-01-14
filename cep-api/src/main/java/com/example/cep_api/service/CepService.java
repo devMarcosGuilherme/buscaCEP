@@ -1,6 +1,5 @@
 package com.example.cep_api.service;
 
-import com.example.cep_api.logging.LogConsultaService;
 import com.example.cep_api.model.Cep;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,7 +35,7 @@ public class CepService {
                         cepResponse.getCep(),
                         cepResponse.getLogradouro(),
                         cepResponse.getBairro(),
-                        cepResponse.getlocalidade(),
+                        cepResponse.getLocalidade(),
                         cepResponse.getEstado()
                 );
             } else {
